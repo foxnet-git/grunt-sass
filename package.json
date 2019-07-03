@@ -13,7 +13,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "tasks"
@@ -32,12 +34,14 @@
   "dependencies": {
     "each-async": "^1.0.0",
     "node-sass": "^3.0.0-beta.2",
-    "object-assign": "^2.0.0"
+    "object-assign": "^2.0.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-nodeunit": "^0.4.1"
-  }
+  },
+  "snyk": true
 }
